@@ -1,0 +1,69 @@
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100%;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.link-voltar {
+  /* Remove a linha de baixo */
+  text-decoration: none; 
+  
+  /* Troca a cor (pode usar nome, HEX ou RGB) */
+  color: #0b0b0b; 
+  
+  /*deixa o texto em negrito */
+  font-weight: bold; 
+
+  font-size: 120%;
+}
+/*muda a cor quando o mouse passa por cima */
+.link-voltar:hover {
+  color: #547859;
+  text-decoration: underline; /* A linha reaparece só ao passar o mouse, se desejar */
+}
+
+.galeria {
+            display: flex;          /* Alinha os itens em linha */
+            flex-wrap: wrap;      /* Permite que as imagens "quebrem" para a linha de baixo em telas pequenas */
+            justify-content: center; /* Centraliza as imagens horizontalmente */
+            gap: 20px;              /* Espaçamento entre as imagens */
+            padding: 20px;
+        }
+
+        /* Estilização das imagens */
+        .galeria img {
+            width: 300px;           /* Largura fixa para manter o padrão */
+            height: 300px;          /* Altura fixa */
+            object-fit: cover;      /* Corta a imagem para preencher o espaço sem distorcer */
+            border-radius: 8px;     /* Bordas arredondadas (opcional) */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave (opcional) */
+            transition: transform 0.3s; /* Efeito suave ao passar o mouse */
+        }
+
+        /* Efeito de zoom ao passar o mouse */
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+h1{
+    font-size: 55px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+    text-align: center;
+    margin-top: 100px;}
+
+h1 span{
+    margin-left: 15px;
+    color: #547859;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+    line-height: 1.6rem;
+}
