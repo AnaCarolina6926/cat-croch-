@@ -12,7 +12,7 @@
 <body>
 
     <a href="index.html" class="link-voltar">
-        <i class="fi fi-sr-undo"></i> Voltar para a Home
+        <i class="fi fi-sr-undo"></i> Voltar
     </a>
 
     <header class="linhas-header">
@@ -23,40 +23,81 @@
         
         <div class="linha_card">
             <div class="linha_image">
-                <img src="imagens/euro-roma-6.jpg" alt="Barbante 6">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/euro-roma-6.jpg" alt="Barbante 6" class="zoom-img">
             </div>
             <h2>Barbante Número 6</h2>
         </div>
 
         <div class="linha_card">
             <div class="linha_image">
-                <img src="imagens/euro-roma-8.jpg" alt="Barbante 8">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/euro-roma-8.jpg" alt="Barbante 8" class="zoom-img">
             </div>
             <h2>Barbante Número 8</h2>
         </div>
 
         <div class="linha_card">
             <div class="linha_image">
-                <img src="imagens/f.jpg" alt="Fio de malha">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/f.jpg" alt="Fio de malha" class="zoom-img">
             </div>
             <h2>Fio de Malha</h2>
         </div>
 
         <div class="linha_card">
             <div class="linha_image">
-                <img src="imagens/lã mollet.webp" alt="Lã">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/lã mollet.webp" alt="Lã" class="zoom-img">
             </div>
             <h2>Lã Mollet</h2>
         </div>
 
         <div class="linha_card">
             <div class="linha_image">
-                <img src="imagens/princesa.jpg" alt="Fio de polipropileno">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/princesa.jpg" alt="Fio de polipropileno" class="zoom-img">
             </div>
             <h2>Fio de Polipropileno</h2>
         </div>
 
     </div>
+
+    <!-- ESTRUTURA DO MODAL (Janela de ampliação) -->
+    <dialog id="imageModal" class="image-modal">
+        <button class="close-btn" aria-label="Fechar">&times;</button>
+        <img class="modal-content" id="imgExpanded" src="" alt="Imagem Ampliada">
+    </dialog>
+
+    <!-- JAVASCRIPT PARA CONTROLAR A AMPLIAÇÃO -->
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgExpanded");
+        const closeBtn = document.querySelector(".close-btn");
+        
+        // Mapeia todas as imagens com a classe zoom-img nesta página
+        const images = document.querySelectorAll(".zoom-img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                modal.showModal();
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
+        });
+
+        // Fecha no botão (X)
+        closeBtn.addEventListener("click", () => {
+            modal.close();
+        });
+
+        // Fecha ao clicar fora da imagem
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.close();
+            }
+        });
+    </script>
 
 </body>
 </html>

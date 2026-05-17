@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/icon header.jpg"> 
+    <link rel="stylesheet" href="estilo_linhas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <title>Linhas Utilizadas</title>
+</head>
+<body>
+
+    <a href="index.html" class="link-voltar">
+        <i class="fi fi-sr-undo"></i> Voltar
+    </a>
+
+    <header class="linhas-header">
+        <h1>Meus <span>trabalhos</span></h1>
+    </header>
+
+    <!-- Galeria de Imagens -->
+    <div class="galeria">
+        
+        <div class="linha_card">
+            <div class="linha_image">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/galeria toalhinha A.jpg" alt="toalhinha modelo 1" class="zoom-img">
+            </div>
+            <h2>Toalhinhas de prolipropileno modelo 1</h2>
+        </div>
+        
+        <div class="linha_card">
+            <div class="linha_image">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/galeria porta copos de patinha.jpg" alt="porta copos de patinha" class="zoom-img">
+            </div>
+            <h2>Porta copos de patinha</h2>
+        </div>
+
+        <div class="linha_card">
+            <div class="linha_image">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/galeria roupinha.jpg" alt="roupinha pet" class="zoom-img">
+            </div>
+            <h2>Roupinha pet</h2>
+        </div>
+
+        <div class="linha_card">
+            <div class="linha_image">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/galeria porta copos.jpg" alt="Porta copos diversos" class="zoom-img">
+            </div>
+            <h2>Porta copos diversos</h2>
+        </div>
+
+        <div class="linha_card">
+            <div class="linha_image">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/galeria toalhinha B.jpg" alt="toalhinha modelo 2" class="zoom-img">
+            </div>
+            <h2>Toalhinhas de prolipropileno modelo 2</h2>
+        </div>
+
+        
+        <div class="linha_card">
+            <div class="linha_image">
+                <!-- Adicionada a classe zoom-img -->
+                <img src="imagens/galeria porta oculos.jpg" alt="porta óculos" class="zoom-img">
+            </div>
+            <h2>Porta óculos de gatinho</h2>
+        </div>
+    </div>
+
+    <!-- ESTRUTURA DO MODAL (Janela que abre ao clicar) -->
+    <dialog id="imageModal" class="image-modal">
+        <button class="close-btn" aria-label="Fechar">&times;</button>
+        <img class="modal-content" id="imgExpanded" src="" alt="Imagem Ampliada">
+    </dialog>
+
+    <!-- JAVASCRIPT PARA CONTROLAR A GALERIA -->
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgExpanded");
+        const closeBtn = document.querySelector(".close-btn");
+        
+        // Seleciona todas as imagens que possuem a classe 'zoom-img'
+        const images = document.querySelectorAll(".zoom-img");
+
+        // Passa por cada imagem e adiciona o evento de clique
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                modal.showModal();         // Abre a janela modal
+                modalImg.src = img.src;    // Copia o caminho da imagem clicada para dentro do modal
+                modalImg.alt = img.alt;    // Copia a descrição de acessibilidade
+            });
+        });
+
+        // Fecha o modal ao clicar no botão de fechar (X)
+        closeBtn.addEventListener("click", () => {
+            modal.close();
+        });
+
+        // Fecha o modal se o usuário clicar no fundo escuro (fora da imagem)
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.close();
+            }
+        });
+    </script>
+
+</body>
+</html>

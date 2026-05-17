@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagens/icon header.jpg"> 
     <link rel="stylesheet" href="style.css">
+    <!-- ATENÇÃO: Como você está usando o mesmo estilo de ampliação, adicione a linha abaixo caso queira herdar o CSS da outra página, ou cole o CSS no seu style.css -->
+    <link rel="stylesheet" href="estilo_linhas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
     <title>Café, Gatos e Crochê</title>
@@ -28,19 +30,23 @@
 
         <div class="main">
             <div class="men_text">
-                <h1><span>Amor, carinho </span> e um pouco de <Span>café</span></h1>
+                <h1><span>Amor, carinho </span> e um pouco de <span>café</span></h1>
             </div>
 
             <div class="main_image">
                 <div class="carrossel-container">
+                    <!-- Classe zoom-img adicionada nas fotos do carrossel -->
                     <div class="slide fade">
-                        <img src="imagens/caminha pet.jpg" alt="Caminha Pet de Crochê">
+                        <img src="imagens/caminha pet.jpg" alt="Caminha Pet de Crochê" class="zoom-img">
                     </div>
                     <div class="slide fade">
-                        <img src="imagens/tapete d egatinho.jpg" alt="Tapete de Gatinho">
+                        <img src="imagens/tapete d egatinho.jpg" alt="Tapete de Gatinho" class="zoom-img">
                     </div>
                     <div class="slide fade">
-                        <img src="imagens/kit bebê.jpeg" alt="Kit de Banheiro">
+                        <img src="imagens/kit bebê.jpeg" alt="Kit de Banheiro" class="zoom-img">
+                    </div>
+                    <div class="slide fade">
+                        <img src="imagens/organizador quadrado.jpg" alt="Kit de Banheiro" class="zoom-img">
                     </div>
 
                     <a class="prev" onclick="mudarSlide(-1)">&#10094;</a>
@@ -63,89 +69,102 @@
     </section>
 
     <div class="menu" id="Menu">
-        <h1>Meus <span>Trabalhos</span></h1>
+        <h1>Modelos disponíveis </h1>
 
         <div class="menu_box">
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/toalhinhas.jpg" alt="Toalhinha">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/toalhinhas.jpg" alt="Toalhinha" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Toalhinha</h2>
                     <p>Confeccionada com fio de polipropileno.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 30,00</h3>
                 </div>
             </div>
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/caminha pet.jpg" alt="Caminha Pet">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/caminha pet.jpg" alt="Caminha Pet" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Caminha Pet</h2>
                     <p>Um refúgio de puro aconchego tecido à mão para oferecer o máximo de conforto ao sono do seu pet.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 50,00</h3>
                 </div>
             </div>
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/tapete d egatinho.jpg" alt="Tapete de Gatinho">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/tapete d egatinho.jpg" alt="Tapete de Gatinho" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Tapete de Gatinho</h2>
                     <p>Lindo tapete decorativo em formato de gatinho para alegrar o ambiente.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 50,00</h3>
                 </div>
             </div>
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/kit banheiro.jpg" alt="Kit Banheiro">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/kit banheiro.jpg" alt="Kit Banheiro" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Kit banheiro</h2>
                     <p>Jogo de banheiro completo com detalhes trabalhados à mão.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 300,00</h3>
                 </div>
             </div>
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/passadeira oval.jpg" alt="Passadeira Oval">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/passadeira oval.jpg" alt="Passadeira Oval" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Passadeira oval</h2>
                     <p>Confeccionada com barbante número 8.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 200,00 kit com 3 <br>R$ 60,00 Unidade<br></h3>
                 </div>
             </div>
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/passadeira retangular.jpg" alt="Passadeira Retangular">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/passadeira retangular.jpg" alt="Passadeira Retangular" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Passadeira retangular</h2>
                     <p>Confeccionada com barbante número 8.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 200,00 kit com 3 <br>R$ 60,00 Unidade<br></h3>
                 </div>
             </div>
 
             <div class="menu_card">
                 <div class="menu_image">
-                    <img src="imagens/porta copo de flor.jpg" alt="Porta Copo">
+                    <!-- Classe zoom-img adicionada -->
+                    <img src="imagens/porta copo de flor.jpg" alt="Porta Copo" class="zoom-img">
                 </div>
                 <div class="menu_info">
                     <h2>Porta copo de flor</h2>
                     <p>Lindo kit de descanso de copos em formato de flores.</p>
-                    <h3>R$ 20,00</h3>
+                    <h3>R$ 20,00 a unidade. R$80,00 kit com 4 unidades</h3>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <!-- ESTRUTURA DO MODAL DE AMPLIAÇÃO -->
+    <dialog id="imageModal" class="image-modal">
+        <button class="close-btn" aria-label="Fechar">&times;</button>
+        <img class="modal-content" id="imgExpanded" src="" alt="Imagem Ampliada">
+    </dialog>
 
     <footer>
         <div class="end">
@@ -154,6 +173,7 @@
     </footer>
 
     <script>
+        // --- CÓDIGO ORIGINAL DO SEU CARROSSEL ---
         let slideIndex = 0;
         let temporizador;
 
@@ -212,6 +232,30 @@
             
             temporizador = setTimeout(mostrarSlidesAutomatico, 5000); 
         }
+
+        // --- NOVO: CÓDIGO PARA AMPLIAR AS IMAGENS ---
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgExpanded");
+        const closeBtn = document.querySelector(".close-btn");
+        const images = document.querySelectorAll(".zoom-img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                modal.showModal();
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.close();
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.close();
+            }
+        });
     </script>
 
 </body>

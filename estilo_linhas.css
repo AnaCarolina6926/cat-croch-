@@ -117,3 +117,78 @@ body {
         font-size: 26px;
     }
 }
+
+
+/* ==========================================================================
+   NOVO: Estilos para o Modal de Ampliação de Imagens (Lightbox)
+   ========================================================================== */
+
+/* Indica visualmente que a imagem pode ser clicada */
+.zoom-img {
+    cursor: pointer;
+}
+
+/* Container da janela suspensa (Tag <dialog> nativa) */
+.image-modal {
+    border: none;
+    background: rgba(0, 0, 0, 0.85); /* Fundo escuro elegante */
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Garante que fique por cima de tudo */
+}
+
+/* Quando o modal estiver ativo/aberto, ativa o Flexbox para centralizar */
+.image-modal[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Foto expandida no centro da tela */
+.modal-content {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    animation: abrirZoom 0.25s ease-out; /* Transição de abertura suave */
+}
+
+/* Botão Fechar (X) no canto superior direito */
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 200; /* Deixa o 'X' mais fininho e sofisticado */
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.15);
+    color: #cccccc;
+}
+
+/* Animação para a foto surgir crescendo sutilmente */
+@keyframes abrirZoom {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
