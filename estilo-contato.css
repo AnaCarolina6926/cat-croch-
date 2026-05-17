@@ -1,40 +1,36 @@
 *{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100%;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+     font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 0;
+  font-style: normal;
+}
+
+body {
+    background-color: #fcfbf9;
+    padding: 30px;
 }
 
 .link-voltar {
-  /* Remove a linha de baixo */
-  text-decoration: none; 
-  
-  /* Troca a cor (pode usar nome, HEX ou RGB) */
-  color: #0b0b0b; 
-  
-  /*deixa o texto em negrito */
-  font-weight: bold; 
-
-  font-size: 120%;
+    text-decoration: none; 
+    color: #0b0b0b; 
+    font-weight: bold; 
+    font-size: 120%;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
 }
-/*muda a cor quando o mouse passa por cima */
+
 .link-voltar:hover {
-  color: #547859;
-  text-decoration: underline; /* A linha reaparece só ao passar o mouse, se desejar */
+    color: #547859;
+    text-decoration: underline; 
 }
 
-/*Order*/
-
+/* Seção Order principal */
 .order{
     width: 100%;
-    height: 100vh;
-    padding: 70px 0;
-    background-size: cover;
-    background-position: center;
+    min-height: 80vh;
+    padding: 40px 0;
 }
 
 .order h1{
@@ -43,58 +39,162 @@
     justify-content: center;
     color: #000;
     font-size: 55px;
-    margin-top: -20px;
+    margin-bottom: 50px;
 }
 
 .order h1 span{
     color: #417845;
     margin-right: 15px;
-    font-family: mv boli;
+    font-family: 'mv boli', cursive, sans-serif;
     text-decoration: none;
 }
 
-
+/* Alinhamento de três colunas (Imagem | Formulário | Info) */
 .order .order_main{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Coluna 1: Imagem dos Gatos */
+.order .order_main .order_image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .order .order_main .order_image img{
-    width: 400px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 
-.order .order_main form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0 10px;
+/* Coluna 2: Formulário Customizado */
+.order .order_main form {
+    flex: 1.2;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.order .order_main form .input p{
-    line-height: 25px;
+.order .order_main form h2 {
+    color: #547859;
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
-.order .order_main form .input{
-    margin: 5px;
+.order .order_main form .input-field p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
 }
 
-.order .order_main form .input input{
-    width: 300px;
-    height: 35px;
-    padding: 0 10px;
+.order .order_main form .input-field input,
+.order .order_main form .input-field textarea {
+    width: 100%;
+    padding: 10px 12px;
     border: 2px solid #cccccc;
-    background: #eeeeee;
+    background: #fdfdfd;
     outline: none;
-    border-radius: 3px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s;
 }
 
+.order .order_main form .input-field input:focus,
+.order .order_main form .input-field textarea:focus {
+    border-color: #547859;
+}
+
+/* Botão de Enviar */
 .order .order_main form .order_btn{
-    padding: 10px 0;
+    padding: 12px;
     color: white;
-    width: 40%;
+    background: #547859;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
     text-align: center;
-    margin-top: 20px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.order .order_main form .order_btn:hover {
+    background-color: #417845;
+}
+
+/* Coluna 3: Informações e Redes da Direita */
+.order .order_main .footer_main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer_tag h2 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footer_tag p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Elementos das Redes Sociais */
+.redes-container .rede-social-linha {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.redes-container .rede-social-linha img {
+    width: 45px;
+    height: 45px;
+}
+
+.redes-container .rede-social-linha a {
     text-decoration: none;
+    color: #417845;
+    font-weight: 600;
+    font-size: 14px;
+    word-break: break-all; /* Faz os links longos se adaptarem à tela */
+}
+
+.redes-container .rede-social-linha a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade Completa para Celulares */
+@media (max-width: 992px) {
+    .order .order_main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .order .order_main .order_image,
+    .order .order_main form,
+    .order .order_main .footer_main {
+        width: 100%;
+        max-width: 500px;
+    }
+    .order h1 {
+        font-size: 38px;
+    }
 }
 
 

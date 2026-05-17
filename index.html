@@ -2,265 +2,217 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café, gatos e crochê</title>
+    <link rel="icon" href="imagens/icon header.jpg"> 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="imagens/icon header.jpg"> 
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+    <title>Café, Gatos e Crochê</title>
 </head>
 <body>
 
     <section id="Home">
         <nav>
             <div class="logo">
-                <img src="imagens/logo.jpg">
-                
+                <img src="imagens/logo.jpg" alt="Logo">
             </div>
 
             <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="linhas.utilizadas.html">Linhas Utilizadas</a></li>
-                 <li><a href="contato.html">Contato</a></li>
-                
+                <li><a href="contato.html">Contato</a></li>
             </ul>
-
 
         </nav>
 
         <div class="main">
-
             <div class="men_text">
-                <h1>Feito com <span>amor</span>,<span>carinho</span><br>e um pouco de <span>Café</span></h1>
+                <h1><span>Amor, carinho </span> e um pouco de <Span>café</span></h1>
             </div>
 
             <div class="main_image">
-                <img src="imagens/capa.jpg">
-            </div>
+                <div class="carrossel-container">
+                    <div class="slide fade">
+                        <img src="imagens/caminha pet.jpg" alt="Caminha Pet de Crochê">
+                    </div>
+                    <div class="slide fade">
+                        <img src="imagens/tapete d egatinho.jpg" alt="Tapete de Gatinho">
+                    </div>
+                    <div class="slide fade">
+                        <img src="imagens/kit bebê.jpeg" alt="Kit de Banheiro">
+                    </div>
 
+                    <a class="prev" onclick="mudarSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="mudarSlide(1)">&#10095;</a>
+                </div>
+
+                <div class="dot-container">
+                    <span class="dot" onclick="slideAtual(1)"></span>
+                    <span class="dot" onclick="slideAtual(2)"></span>
+                    <span class="dot" onclick="slideAtual(3)"></span>
+                </div>
+            </div>
         </div>
 
         <p>
-            Bem-vindo ao meu cantinho, onde cada nó conta uma história e 
-            cada peça carrega um pedacinho de afeto. Aqui, o crochê deixa de ser apenas 
-            linha e agulha para se transformar em peças únicas, tecidas com paciência e dedicação. Convido você a explorar nosso catálogo e descobrir como o trabalho artesanal pode levar mais cor, 
-            conforto e personalidade para o seu dia a dia.
+            Bem-vindo ao meu cantinho, onde cada nó conta uma história e cada peça carrega um pedacinho de afeto. Aqui, o crochê deixa de ser apenas linha e agulha para se transformar em peças únicas, tecidas com paciência e dedicação. Convido você a explorar nosso catálogo e descobrir como o trabalho artesanal pode levar mais cor, conforto e personalidade para o seu dia a dia.
         </p>
 
        
-
     </section>
 
+    <div class="menu" id="Menu">
+        <h1>Meus <span>Trabalhos</span></h1>
 
+        <div class="menu_box">
 
-    <!--About-->
-
-    <div class="about" id="About">
-        <div class="about_main">
-
-            <div class="image">
-                <img src="imagens/capa esquerda.jpg" alt="">
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/toalhinhas.jpg" alt="Toalhinha">
+                </div>
+                <div class="menu_info">
+                    <h2>Toalhinha</h2>
+                    <p>Confeccionada com fio de polipropileno.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
             </div>
 
-            <div class="about_text">
-               
-                <h1><span>Sobre</span>mim</h1>
-                
-                <p>
-                  Aos 24 anos, descobri que a felicidade mora nos detalhes: no aroma de um café recém-passado, no ronrono de um gato e na paz de um momento de silêncio. Foi nessa busca por tranquilidade que o 
-                  crochê entrou na minha vida, transformando-se em muito mais que um hobby. Cada ponto que teço é um refúgio de conforto e uma forma de materializar
-                   o carinho e a calma que acredito que o mundo precisa.
-                </p>
-      
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/caminha pet.jpg" alt="Caminha Pet">
+                </div>
+                <div class="menu_info">
+                    <h2>Caminha Pet</h2>
+                    <p>Um refúgio de puro aconchego tecido à mão para oferecer o máximo de conforto ao sono do seu pet.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/tapete d egatinho.jpg" alt="Tapete de Gatinho">
+                </div>
+                <div class="menu_info">
+                    <h2>Tapete de Gatinho</h2>
+                    <p>Lindo tapete decorativo em formato de gatinho para alegrar o ambiente.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/kit banheiro.jpg" alt="Kit Banheiro">
+                </div>
+                <div class="menu_info">
+                    <h2>Kit banheiro</h2>
+                    <p>Jogo de banheiro completo com detalhes trabalhados à mão.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/passadeira oval.jpg" alt="Passadeira Oval">
+                </div>
+                <div class="menu_info">
+                    <h2>Passadeira oval</h2>
+                    <p>Confeccionada com barbante número 8.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/passadeira retangular.jpg" alt="Passadeira Retangular">
+                </div>
+                <div class="menu_info">
+                    <h2>Passadeira retangular</h2>
+                    <p>Confeccionada com barbante número 8.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="imagens/porta copo de flor.jpg" alt="Porta Copo">
+                </div>
+                <div class="menu_info">
+                    <h2>Porta copo de flor</h2>
+                    <p>Lindo kit de descanso de copos em formato de flores.</p>
+                    <h3>R$ 20,00</h3>
+                </div>
             </div>
 
         </div>
-
-       
-
     </div>
 
-
-
-    <!--Menu-->
-
-    <div class="menu" id="Menu">
-        <h1>Meus<span>trabalhos</span></h1>
-
-        <div class="menu_box">
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/toalhinhas.jpg">
-                </div>
-
-             
-
-                <div class="menu_info">
-                    <h2>Toalhinha</h2>
-                    <p>
-                        Confeccionadass com fio de prolipropileno.
-                    <h3>$20.00</h3>
-
-                </div>
-
-            </div> 
-            
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/caminha pet.jpg">
-                </div>
-
-
-                <div class="menu_info">
-                    <h2>Caminha Pet</h2>
-                    <p>
-                        Um refúgio de puro aconchego tecido à mão para oferecer o máximo de conforto e tranquilidade ao sono do seu pet.
-                    <h3>$20.00</h3>
-                  
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/tapete d egatinho.jpg">
-                </div>
-
-              
-
-                <div class="menu_info">
-                    <h2>Tapete de Gatinho</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        <h3>$20.00</h3>
-                    
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/tapete de patinha.jpg">
-                </div>
-
-              
-
-                <div class="menu_info">
-                    <h2>Tapete de patinha</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur 
-                    <h3>$20.00</h3>
-                 
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/kit banheiro.jpg">
-                </div>
-
-             
-
-                <div class="menu_info">
-                    <h2>Kit banheiro</h2>
-                    <p>
-                         Confeccionadas com barbante número 8
-                    <h3>$20.00</h3>
-                   
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/passadeira oval.jpg">
-                </div>
-
-                
-
-                <div class="menu_info">
-                    <h2>Passadeira oval</h2>
-                    <p>
-                        Confeccionadas com barbante número 8
-                    </p>
-                    <h3>$20.00</h3>
-                   
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/passadeira retangular.jpg">
-                </div>
-
-             
-
-                <div class="menu_info">
-                    <h2>Passadeira retangular</h2>
-                    <p>
-                        Confeccionadas com barbante número 8
-                    </p>
-                    <h3>$20.00</h3>
-                   
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/porta copo de fio de malha.jpg">
-                </div>
-
-              
-
-                <div class="menu_info">
-                    <h2>Porta copos de gatinho</h2>
-                    <p>
-                        Confeccionado em fio de malha
-                    <h3>$20.00</h3>
-                   
-                </div>
-
-            </div> 
-
-            <div class="menu_card">
-
-                <div class="menu_image">
-                    <img src="imagens/porta copo de flor.jpg">
-                </div>
-
-             
-
-                <div class="menu_info">
-                    <h2>Porta copo de flor</h2>
-                    <p>
-                        Transforme a sua mesa com o toque autêntico do feito à mão.
-                    <h3>$20.00</h3>
-                    
-                </div>
-
-            </div> 
-
-    </div>
-           
-
-   <footer>
-
-         <p>&copy; 2026 Café, gatos e crochê. Todos os direitos reservados &reg;</p>
-
+    <footer>
+        <div class="end">
+            <p>Criado por Ana Carolina Oliveira dos Santos | © 2026 <span>Café, Gatos e Crochê</span></p>
+        </div>
     </footer>
 
+    <script>
+        let slideIndex = 0;
+        let temporizador;
 
+        mostrarSlidesAutomatico();
 
-    
+        function mostrarSlidesAutomatico() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            if (slides[slideIndex-1]) {
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+            
+            temporizador = setTimeout(mostrarSlidesAutomatico, 3000); 
+        }
+
+        function mudarSlide(n) {
+            clearTimeout(temporizador);
+            exibirSlideManual(slideIndex += n);
+        }
+
+        function slideAtual(n) {
+            clearTimeout(temporizador);
+            exibirSlideManual(slideIndex = n);
+        }
+
+        function exibirSlideManual(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            
+            temporizador = setTimeout(mostrarSlidesAutomatico, 5000); 
+        }
+    </script>
+
 </body>
 </html>
