@@ -86,8 +86,8 @@ section nav .icon i{
     color: #000;
     margin: 0 5px;
     cursor: pointer;
-    transition: 0.3s;}
-
+    transition: 0.3s;
+}
 
 section nav .icon i:hover{
     color:#2f783a;
@@ -191,6 +191,7 @@ section .main .main_image {
     object-fit: cover; 
     display: block;
     border-radius: 15px;
+    cursor: zoom-in; /* ADICIONADO: Lupinha de mais no carrossel */
 }
 
 .prev, .next {
@@ -312,6 +313,7 @@ section .main .main_image {
     height: 100%;
     object-fit: cover; 
     transition: 0.3s;
+    cursor: zoom-in; /* ADICIONADO: Lupinha de mais nas fotos dos produtos */
 }
 
 .menu .menu_box .menu_card .menu_image:hover img{
@@ -417,9 +419,9 @@ footer .end span{
    INTEGRAÇÃO: Estilos para o Modal de Ampliação de Imagens (Lightbox)
    ========================================================================== */
 
-/* Transforma o ponteiro em "mãozinha/lupa" para indicar o clique nas fotos */
+/* Transforma o ponteiro em "lupa" para indicar o clique nas fotos */
 .zoom-img {
-    cursor: pointer;
+    cursor: zoom-in; /* ATUALIZADO: De pointer para zoom-in */
 }
 
 /* Estilo do container preto que encobre o fundo da tela */
@@ -453,6 +455,7 @@ footer .end span{
     border-radius: 6px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
     animation: abrirZoom 0.25s ease-out; /* Transição suave */
+    cursor: zoom-out; /* ADICIONADO: Lupinha de menos quando a foto já está aberta */
 }
 
 /* Botão Fechar (X) */
@@ -486,4 +489,3 @@ footer .end span{
         opacity: 1;
     }
 }
-

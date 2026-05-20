@@ -19,13 +19,12 @@
   <!-- CABEÇALHO -->
   <header>
     <div class="container">
-      <h1>Café, gatos e crochê</h1>
+      <h1>Peças á pronta Entrega</h1>
     </div>
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="container pronta-entrega-section">
-    <h2 class="titulo-pagina">Peças Prontas</h2>
     <p class="subtitulo">Unidades únicas produzidas à mão. Garanta a sua antes que acabe!</p>
 
     <!-- CONTAINER DO GRID -->
@@ -34,7 +33,6 @@
       <!-- PRODUTO 1 -->
       <div class="card-produto">
         <div class="imagem-container">
-
           <img src="imagens/toalhinhas.jpg" alt="Bolsa de crochê">
         </div>
         <div class="info-produto">
@@ -49,8 +47,6 @@
       <!-- PRODUTO 2 -->
       <div class="card-produto">
         <div class="imagem-container">
-        
-          
           <img src="https://images.unsplash.com/photo-1584992231904-ee9527ec3fc6?auto=format&fit=crop&w=500&q=80" alt="Amigurumi de Crochê">
         </div>
         <div class="info-produto">
@@ -65,7 +61,6 @@
       <!-- PRODUTO 3 -->
       <div class="card-produto">
         <div class="imagem-container">
-         
           <img src="https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&w=500&q=80" alt="Caminho de Mesa de Crochê">
         </div>
         <div class="info-produto">
@@ -86,40 +81,45 @@
       <p>Criado por Ana Carolina Oliveira dos Santos | © 2026 <span>Café, Gatos e Crochê</span></p>
     </div>
   </footer>
-<div id="modal-zoom" class="modal">
-  <span class="fechar-modal">&times;</span>
-  <img class="conteudo-modal" id="img-ampliada">
-</div>
 
-<script>
-  // Pega o Modal e a imagem de dentro dele
-  const modal = document.getElementById("modal-zoom");
-  const imgAmpliada = document.getElementById("img-ampliada");
-  const fechar = document.querySelector(".fechar-modal");
+  <!-- MODAL DE ZOOM REESTRUTURADO E BLINDADO CONTRA ERROS DE CSS -->
+  <div id="modal-zoom" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center;">
+    <!-- Botão de Fechar (X) -->
+    <span class="fechar-modal" style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">&times;</span>
+    <!-- Imagem Ampliada -->
+    <img class="conteudo-modal" id="img-ampliada" alt="Imagem ampliada" style="max-width: 85%; max-height: 85%; object-fit: contain; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+  </div>
 
-  // Seleciona TODAS as imagens que estão dentro dos containers de produto
-  const imagensProdutos = document.querySelectorAll(".imagem-container img");
+  <script>
+    // Seleciona os elementos do Modal pelos IDs e classes
+    const modal = document.getElementById("modal-zoom");
+    const imgAmpliada = document.getElementById("img-ampliada");
+    const fechar = document.querySelector(".fechar-modal");
 
-  // Adiciona o evento de clique em cada imagem de produto
-  imagensProdutos.forEach(img => {
-    img.style.cursor = "zoom-in"; // Muda o mouse para uma lupa de zoom
-    img.addEventListener("click", function() {
-      modal.style.display = "block";
-      imgAmpliada.src = this.src; // Copia o caminho da foto clicada para o pop-up
+    // Seleciona todas as imagens dentro dos cards de produto
+    const imagensProdutos = document.querySelectorAll(".imagem-container img");
+
+    // Adiciona o evento de clique em cada imagem
+    imagensProdutos.forEach(img => {
+      img.style.cursor = "zoom-in"; // Força o cursor de lupa em todas as imagens
+      
+      img.addEventListener("click", function() {
+        modal.style.display = "flex"; // Abre usando 'flex' para ativar o alinhamento centralizado perfeito
+        imgAmpliada.src = this.src;   // Transfere o caminho da imagem clicada para o modal
+      });
     });
-  });
 
-  // Fecha o pop-up quando clica no 'X'
-  fechar.addEventListener("click", function() {
-    modal.style.display = "none";
-  });
-
-  // Fecha o pop-up se o cliente clicar em qualquer lugar fora da imagem
-  modal.addEventListener("click", function(e) {
-    if (e.target === modal) {
+    // Fecha o modal ao clicar no botão 'X'
+    fechar.addEventListener("click", function() {
       modal.style.display = "none";
-    }
-  });
-</script>
+    });
+
+    // Fecha o modal se o usuário clicar na área escura do fundo
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
