@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="imagens/icon header.jpg"> 
+  <title>Pronta Entrega</title>
+  <!-- Link que conecta o HTML ao arquivo CSS externo -->
+  <link rel="stylesheet" href="pronta-entrega.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+</head>
+<body>
+
+  <a href="index.html" class="link-voltar">
+    <i class="fi fi-sr-undo"></i> Voltar
+  </a>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container">
+      <h1>Café, gatos e crochê</h1>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container pronta-entrega-section">
+    <h2 class="titulo-pagina">Peças Prontas</h2>
+    <p class="subtitulo">Unidades únicas produzidas à mão. Garanta a sua antes que acabe!</p>
+
+    <!-- CONTAINER DO GRID -->
+    <div class="grid-produtos">
+
+      <!-- PRODUTO 1 -->
+      <div class="card-produto">
+        <div class="imagem-container">
+
+          <img src="imagens/toalhinhas.jpg" alt="Bolsa de crochê">
+        </div>
+        <div class="info-produto">
+          <h3>Bolsa Fio de Malha Terracota</h3>
+          <p class="preco">R$ 120,00</p>
+          <p class="detalhes">Confortável e moderna. Medidas: 25cm x 20cm. Acompanha alça de couro sintético removível.</p>
+          <!-- LINK DO WHATSAPP CONFIGURADO COM SEU NÚMERO -->
+          <a href="https://wa.me/5511959024659?text=Olá,%20Ana!%20Vi%20no%20site%20e%20tenho%20interesse%20na%20Bolsa%20Fio%20de%20Malha%20Terracota%20à%20pronta%20entrega." target="_blank" class="btn-comprar">Quero esta peça</a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 2 -->
+      <div class="card-produto">
+        <div class="imagem-container">
+        
+          
+          <img src="https://images.unsplash.com/photo-1584992231904-ee9527ec3fc6?auto=format&fit=crop&w=500&q=80" alt="Amigurumi de Crochê">
+        </div>
+        <div class="info-produto">
+          <h3>Amigurumi Ursinho Theo</h3>
+          <p class="preco">R$ 85,00</p>
+          <p class="detalhes">Perfeito para decorar o quarto do bebê. Feito com fio 100% algodão e olhos com trava de segurança. Altura: 22cm.</p>
+          <!-- LINK DO WHATSAPP CONFIGURADO COM SEU NÚMERO -->
+          <a href="https://wa.me/5511959024659?text=Olá,%20Ana!%20Vi%20no%20site%20e%20tenho%20interesse%20no%20Amigurumi%20Ursinho%20Theo%20à%20pronta%20entrega." target="_blank" class="btn-comprar">Quero esta peça</a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 3 -->
+      <div class="card-produto">
+        <div class="imagem-container">
+         
+          <img src="https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&w=500&q=80" alt="Caminho de Mesa de Crochê">
+        </div>
+        <div class="info-produto">
+          <h3>Centro de Mesa Boho</h3>
+          <p class="preco">R$ 150,00</p>
+          <p class="detalhes">Traz elegância para sua sala. Feito em barbante ecológico na cor cru. Diâmetro: 60cm.</p>
+          <!-- LINK DO WHATSAPP CONFIGURADO COM SEU NÚMERO -->
+          <a href="https://wa.me/5511959024659?text=Olá,%20Ana!%20Vi%20no%20site%20e%20tenho%20interesse%20no%20Centro%20de%20Mesa%20Boho%20à%20pronta%20entrega." target="_blank" class="btn-comprar">Quero esta peça</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="end">
+      <p>Criado por Ana Carolina Oliveira dos Santos | © 2026 <span>Café, Gatos e Crochê</span></p>
+    </div>
+  </footer>
+<div id="modal-zoom" class="modal">
+  <span class="fechar-modal">&times;</span>
+  <img class="conteudo-modal" id="img-ampliada">
+</div>
+
+<script>
+  // Pega o Modal e a imagem de dentro dele
+  const modal = document.getElementById("modal-zoom");
+  const imgAmpliada = document.getElementById("img-ampliada");
+  const fechar = document.querySelector(".fechar-modal");
+
+  // Seleciona TODAS as imagens que estão dentro dos containers de produto
+  const imagensProdutos = document.querySelectorAll(".imagem-container img");
+
+  // Adiciona o evento de clique em cada imagem de produto
+  imagensProdutos.forEach(img => {
+    img.style.cursor = "zoom-in"; // Muda o mouse para uma lupa de zoom
+    img.addEventListener("click", function() {
+      modal.style.display = "block";
+      imgAmpliada.src = this.src; // Copia o caminho da foto clicada para o pop-up
+    });
+  });
+
+  // Fecha o pop-up quando clica no 'X'
+  fechar.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // Fecha o pop-up se o cliente clicar em qualquer lugar fora da imagem
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>

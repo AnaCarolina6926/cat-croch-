@@ -1,0 +1,258 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 0;
+  font-style: normal;
+}
+
+body {
+  background-color: #fcfaf7; /* Fundo off-white aconchegante */
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- BOTÃO VOLTAR (IGUAL ÀS IMAGENS) --- */
+.link-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone de desfazer e o texto */
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #54775d; /* Verde musgo dos caracteres */
+  padding: 12px 30px;
+  border-radius: 50px; /* Formato de pílula bem arredondado */
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Sombra suave */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  margin: 20px 0 0 5%; /* Alinhamento inicial na página */
+}
+
+/* Efeito ao passar o mouse (Inversão de cores) */
+.link-voltar:hover {
+  background-color: #54775d; /* Fundo vira o verde musgo */
+  color: #ffffff; /* Texto e ícone viram branco */
+}
+
+/* Clique sutil */
+.link-voltar:active {
+  transform: scale(0.98);
+}
+
+/* --- TOPO / TOPO DA PÁGINA --- */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0e6df;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  color: #588056; /* Tom terroso suave */
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: #7a7a7a;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1f531d;
+}
+
+.link-ativo {
+  color: #8ec39b;
+  font-weight: bold;
+}
+
+/* --- SESSÃO PRONTA ENTREGA --- */
+.pronta-entrega-section {
+  padding: 60px 0;
+}
+
+.titulo-pagina {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #8c8c8c;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* --- CONTAINER DO GRID (Força os cards a se organizarem perfeitamente) --- */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* --- CARD DO PRODUTO (Garante a estrutura vertical em formato de bloco) --- */
+.card-produto {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Garante que a imagem fique em cima e as informações embaixo */
+  width: 100%;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- RECIPIENTE DA IMAGEM --- */
+.imagem-container {
+  position: relative;
+  width: 100%;
+  height: 320px; /* Altura fixa ideal para destacar o crochê */
+  background-color: #f5f5f5;
+}
+
+.imagem-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a foto preencher o espaço perfeitamente sem distorcer */
+  display: block;
+}
+
+/* --- TEXTOS E INFORMAÇÕES DO PRODUTO --- */
+.info-produto {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Faz com que todos os cards fiquem com a mesma altura final */
+}
+
+.info-produto h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.preco {
+  font-size: 1.4rem;
+  color: #54775d; /* Lindo verde combinando com o botão voltar */
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.detalhes {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Empurra o botão de compra sempre para o final do card */
+}
+
+/* --- BOTÃO DE COMPRA ESTILO WHATSAPP (Corrigido para não virar link azul) --- */
+.btn-comprar, 
+.info-produto a.btn-comprar {
+  display: block !important;
+  text-align: center;
+  background-color: #55906b !important; /* Seu verde de destaque */
+  color: #ffffff !important;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Força o alinhamento na base */
+}
+
+.btn-comprar:hover,
+.info-produto a.btn-comprar:hover {
+  background-color: #3d6b4f !important; /* Tom mais escuro elegante no hover */
+  color: #ffffff !important;
+}
+
+.btn-comprar:active {
+  transform: scale(0.98);
+}
+
+/* --- ESTILIZAÇÃO DO ZOOM (MODAL) --- */
+.modal {
+  display: none; /* Fica escondido por padrão */
+  position: fixed;
+  z-index: 9999; /* Fica por cima de absolutamente tudo */
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85); /* Fundo preto transparente elegante */
+  backdrop-filter: blur(5px); /* Dá um leve desfoque chique no fundo */
+}
+
+/* A imagem que vai aparecer ampliada */
+.conteudo-modal {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; /* Limita o tamanho para não quebrar em telas gigantes */
+  max-height: 80vh; /* Não deixa a foto passar da altura da tela */
+  object-fit: contain;
+  border-radius: 8px;
+  
+  /* Animação suave de crescimento ao abrir */
+  animation-name: zoomSuave;
+  animation-duration: 0.3s;
+}
+
+@keyframes zoomSuave {
+  from { transform: scale(0); opacity: 0; } 
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Botão de Fechar (X) */
+.fechar-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fechar-modal:hover {
+  color: #55906b; /* Muda para o seu verde musgo ao passar o mouse */
+  transform: scale(1.1);
+}
+
+/* Ajuste para celulares (ocupa mais espaço na telinha) */
+@media (max-width: 700px) {
+  .conteudo-modal {
+    width: 95%;
+    padding-top: 40px;
+  }
+  .fechar-modal {
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+  }
+}
